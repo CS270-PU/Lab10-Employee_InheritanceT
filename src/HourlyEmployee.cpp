@@ -1,10 +1,3 @@
-//******************************************************************************
-// File name:    HourlyEmployee.cpp
-// Author:       CS, Pacific University
-// Class:        CS270
-// Purpose:      Implementation of HourlyEmployee
-//******************************************************************************
-
 #include "HourlyEmployee.h"
 
 // default constructor
