@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "gdb - debug",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/main.exe",
+      "cwd": "${workspaceFolder}",
+      "args": [],
+      "stopAtEntry": false,
+      "MIMode": "gdb",
+      "console": "integratedTerminal",
+      "preLaunchTask": "build"
+    }
+  ]
+}
