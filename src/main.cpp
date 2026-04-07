@@ -1,22 +1,34 @@
-//******************************************************************************
-// File name:   main.cpp
-// Author:      CS, Pacific University
-// Date:        
-// Class:       
-// Assignment:  
-// Purpose:     Simple driver to execute SampleClass class
-// Hours:       
-//******************************************************************************
-
 #include <iostream>
-#include "../include/SampleClass.h"
+#include "../include/Employee.h"
+#include "../include/HourlyEmployee.h"
 
 int main () {
-  SampleClass cSampleClass;
+  Employee cEmployee;
 
-  std::cout << "Factorial of 1: " << cSampleClass.factorial (0) << std::endl;
+  std::string cName, cSSN;
 
-  std::cout << "Process Completed" << std::endl;
+  std::cout << "Enter name (single word): ";
+  std::cin >> cName;
 
-  return EXIT_SUCCESS;
+  std::cout << "Enter SSN: ";
+  std::cin >> cSSN;
+
+  cEmployee = Employee(cName, cSSN);
+
+  std::cout << "\nEmployee entered:\n";
+  cEmployee.write(std::cout);
+
+  // ----- HourlyEmployee test -----
+  HourlyEmployee cHourly;
+
+  std::cout << "\nEnter hourly employee (name ssn wage hours): ";
+  if (!cHourly.read(std::cin)) {
+    std::cout << "Input error\n";
+    return 1;
+  }
+
+  std::cout << "\nHourlyEmployee entered:\n";
+  cHourly.write(std::cout);
+
+  return 0;
 }
