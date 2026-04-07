@@ -9,7 +9,7 @@ class HourlyEmployee : public Employee {
 public:
   HourlyEmployee ();
   HourlyEmployee (const std::string& rcName, const std::string& rcSSN,
-                  double dHourlyWage, double dHoursWorked);
+    double dHourlyWage, double dHoursWorked);
 
   double getHourlyWage () const;
   double getHoursWorked () const;

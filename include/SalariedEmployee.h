@@ -9,8 +9,8 @@ class SalariedEmployee : public Employee {
 public:
   SalariedEmployee ();
   SalariedEmployee (const std::string& rcName,
-                    const std::string& rcSSN,
-                    double dSalary);
+    const std::string& rcSSN,
+    double dSalary);
 
   double getSalary () const;
   double getWeeklyPay () const;

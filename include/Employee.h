@@ -12,7 +12,7 @@ public:
   std::string getSSN () const;
 
   void write (std::ostream& rcOutStream) const;
-  bool read (std::istream &rcInStream);
+  bool read (std::istream& rcInStream);
 
 private:
   std::string mcName, mcSSN;

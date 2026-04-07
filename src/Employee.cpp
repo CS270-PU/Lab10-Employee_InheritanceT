@@ -7,7 +7,7 @@ Employee::Employee () : mcName (""), mcSSN ("") {
 
 // parameterized constructor
 Employee::Employee (const std::string& rcName,
-                    const std::string& rcSSN)
+  const std::string& rcSSN)
   : mcName (rcName), mcSSN (rcSSN) {
 }
 

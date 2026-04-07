@@ -7,8 +7,8 @@ SalariedEmployee::SalariedEmployee ()
 
 // parameterized constructor
 SalariedEmployee::SalariedEmployee (const std::string& rcName,
-                                    const std::string& rcSSN,
-                                    double dSalary)
+  const std::string& rcSSN,
+  double dSalary)
   : Employee (rcName, rcSSN), mdSalary (dSalary) {
 }
 
@@ -23,16 +23,16 @@ double SalariedEmployee::getWeeklyPay () const {
 
 // write
 void SalariedEmployee::write (std::ostream& rcOutStream) const {
-  Employee::write(rcOutStream);
+  Employee::write (rcOutStream);
   rcOutStream << "Salary: " << mdSalary << std::endl;
-  rcOutStream << "Weekly Pay: " << getWeeklyPay() << std::endl;
+  rcOutStream << "Weekly Pay: " << getWeeklyPay () << std::endl;
 }
 
 // read
 bool SalariedEmployee::read (std::istream& rcInStream) {
   bool bSuccess = true;
 
-  if (!Employee::read(rcInStream)) {
+  if (!Employee::read (rcInStream)) {
     bSuccess = false;
   }
   else if (!(rcInStream >> mdSalary)) {

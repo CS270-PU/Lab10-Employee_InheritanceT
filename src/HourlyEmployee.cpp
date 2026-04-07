@@ -7,12 +7,12 @@ HourlyEmployee::HourlyEmployee ()
 
 // parameterized constructor
 HourlyEmployee::HourlyEmployee (const std::string& rcName,
-                                const std::string& rcSSN,
-                                double dHourlyWage,
-                                double dHoursWorked)
+  const std::string& rcSSN,
+  double dHourlyWage,
+  double dHoursWorked)
   : Employee (rcName, rcSSN),
-    mdHourlyWage (dHourlyWage),
-    mdHoursWorked (dHoursWorked) {
+  mdHourlyWage (dHourlyWage),
+  mdHoursWorked (dHoursWorked) {
 }
 
 // getters
@@ -30,17 +30,17 @@ double HourlyEmployee::getWeeklyPay () const {
 
 // write
 void HourlyEmployee::write (std::ostream& rcOutStream) const {
-  Employee::write(rcOutStream);
+  Employee::write (rcOutStream);
   rcOutStream << "Hourly Wage: " << mdHourlyWage << std::endl;
   rcOutStream << "Hours Worked: " << mdHoursWorked << std::endl;
-  rcOutStream << "Weekly Pay: " << getWeeklyPay() << std::endl;
+  rcOutStream << "Weekly Pay: " << getWeeklyPay () << std::endl;
 }
 
 // read
 bool HourlyEmployee::read (std::istream& rcInStream) {
   bool bSuccess = true;
 
-  if (!Employee::read(rcInStream)) {
+  if (!Employee::read (rcInStream)) {
     bSuccess = false;
   }
   else if (!(rcInStream >> mdHourlyWage)) {
